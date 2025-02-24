@@ -6,10 +6,10 @@ canvas.height = 600;
 const check_limits = (ball) => {
   let next_x = ball.x + ball.dx;
   let next_y = ball.y + ball.dy;
-  let right_limit = ball.width - ball.radius;
+  let right_limit = canvas.width - ball.radius;
   let left_limit = ball.radius;
   let top_imit = ball.radius;
-  let bottom_limit = ball.height - ball.radius;
+  let bottom_limit = canvas.height - ball.radius;
 
   if (next_x > right_limit || next_x < left_limit) {
     ball.dx *= -1;
@@ -34,7 +34,7 @@ class Ball {
   }
 
   move() {
-    this.ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    this.ctx.clearRect(0, 0, canvas.width, canvas.height);
     check_limits(this);
     this.draw();
   }
