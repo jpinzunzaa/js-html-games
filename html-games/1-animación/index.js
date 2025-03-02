@@ -3,7 +3,6 @@ const ctx = canvas.getContext('2d');
 canvas.width = 800;
 canvas.height = 600;
 
-
 const check_limits = (ball) => {
   let next_x = ball.x + ball.dx;
   let next_y = ball.y + ball.dy;
